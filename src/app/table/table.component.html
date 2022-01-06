@@ -1,0 +1,37 @@
+<table>
+    <tr class="black">
+        <td><h4>Tarefa</h4></td>
+        <th><h4>Vencido</h4></th>
+        <th><h4>D0</h4></th>
+        <th><h4>D1</h4></th>
+        <th><h4>D2</h4></th>
+        <th><h4>D3</h4></th>
+        <th><h4>Total</h4></th>
+    </tr>
+    <tr *ngFor="let h of histograma" class="apontado">
+        <td class="ponteiro">{{h.TAREFA}}</td>
+        <td class="azul_claro">{{h.VENCIDO}}</td>
+        <td class="d0">{{h.D0}}</td>
+        <td class="d1">{{h.D1}}</td>
+        <td class="d2">{{h.D2}}</td>
+        <td class="d3">{{h.D3}}</td>
+        <td class="azul_claro">{{h.TOTAL}}</td>
+    </tr>
+</table>
+
+<br>
+<br>
+
+<div class="details">
+    <ul *ngFor="let h of histograma">
+        <li>Instacia - {{h.DRILLDOWN[0].INSTANCIA}}</li>
+        <li>Status - {{h.DRILLDOWN[0].STATUS}}</li>
+        <li>Protocolo - {{h.DRILLDOWN[0].PROTOCOLO}}</li>
+        <li>Regua - {{h.DRILLDOWN[0].REGUA}}</li>
+        <li>Inicio - {{h.DRILLDOWN[0].INICIO}}</li>
+        <li>SLA - {{h.DRILLDOWN[0].SLA}}</li>
+        <li>Tipo - {{h.DRILLDOWN[0].TIPO_SOLICITACAO}}</li>
+        <li>Operador - {{h.DRILLDOWN[0].operador}}</li>
+        
+    </ul>
+</div>
