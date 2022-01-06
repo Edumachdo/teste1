@@ -19,6 +19,4 @@ export class TableComponent implements OnInit {
   listar(){
     this.HistogramaService.listar().subscribe(dados => this.histograma = dados);
   }
-
-  
 }
